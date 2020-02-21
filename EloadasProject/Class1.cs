@@ -30,7 +30,7 @@ namespace EloadasProject
                                                 }
                                 }
                             }
-            return vege;
+            return vege; 
         }
         public int Szabadhelyek
         {
