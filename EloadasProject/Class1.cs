@@ -8,6 +8,11 @@ namespace EloadasProject
 {
     public class Eloadas
     {
+        bool[,] foglalasok;
+        public Eloadas(int sorokSzama,int helyekSzama)
+        {
+            this.foglalasok = new bool[sorokSzama, helyekSzama];
+        }
 
 
     }
