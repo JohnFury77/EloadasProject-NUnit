@@ -11,11 +11,12 @@ namespace EloadasProject
         bool[,] foglalasok;
         public Eloadas(int sorokSzama,int helyekSzama)
         {
-            this.foglalasok = new bool[sorokSzama, helyekSzama];
-            if (!(sorokSzama >= 0) || !(helyekSzama >= 0))  
+            if (!(sorokSzama > 0) || !(helyekSzama > 0))  
             {
                 throw new ArgumentException(String.Format("A paraméterek nem nagyobbak 0-nál."));
             }
+            this.foglalasok = new bool[sorokSzama, helyekSzama];
+            
         }
 
 
