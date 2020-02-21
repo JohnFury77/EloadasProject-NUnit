@@ -37,20 +37,35 @@ namespace EloadasProject
             get
             {
                 int szabadhelyek = 0;
-                for (int i = 0; i < foglalasok.GetLength(0); i++)
-                {
-                    for (int j = 0; j < foglalasok.GetLength(1); j++)
-                    {
-                        if (foglalasok[i, j] != true )
-                        {
-
-                            szabadhelyek++;
-                            
-                        }
-                    }
-                }
+                
                 return szabadhelyek;
             }
+        }
+        public bool Teli()
+        {
+            bool telivane = true;
+            for (int i = 0; i < foglalasok.GetLength(0); i++)
+            {
+                for (int j = 0; j < foglalasok.GetLength(1); j++)
+                {
+                    if (foglalasok[i, j] == false)
+                    {
+
+                        telivane = false;
+
+                    }
+                }
+            }
+            return telivane;
+        }
+        public bool Foglalt(int sorSzam, int helySzam)
+        {
+
+            if (sorSzam<0||helySzam<0)
+            {
+                throw new ArgumentException();
+            }
+            return foglalasok[sorSzam, helySzam];
         }
 
     }
